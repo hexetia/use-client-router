@@ -24,7 +24,7 @@ function fixClientRouter(): NextRouter {
 			query: (match(readyToPathToRegExpProcess)(windowPathname) as MatchResult<ParsedUrlQuery>).params,
 		};
 	} else {
-		// this empty router it's for next.js server throw they error about router usage in server
+		// this empty fake router is for Next.js server throw the error about router usage on server-side
 		return { query: {}, pathname: '', route: '', asPath: '', basePath: '' } as NextRouter;
 	}
 }
