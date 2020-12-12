@@ -1,0 +1,34 @@
+{
+  "name": "use-client-router",
+  "version": "1.0.0",
+  "description": "A react hook that make router.query and router.pathname available on first-render",
+  "keywords": [
+    "useClientRouter"
+  ],
+  "repository": "https://github.com/morhogg/use-client-router",
+  "license": "MIT",
+  "author": "Lucas Nascimento <lucasljj@gmail.com>",
+  "sideEffects": false,
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/index.umd.js",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "microbundle": "^0.12.4",
+    "typescript": "^4.1.2"
+  },
+  "peerDependencies": {
+    "next": "^10.0.3"
+  },
+  "dependencies": {
+    "path-to-regexp": "^6.2.0"
+  }
+}
