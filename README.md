@@ -1,4 +1,4 @@
-A tiny hook (300 Bytes gzipped) that make router.query and router.pathname available on first-render
+A tiny hook (2 KB gzipped) that make router.query and router.pathname available on first-render
 
 
 ### Motivation

@@ -1,9 +1,9 @@
 {
   "name": "use-client-router",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A react hook that make router.query and router.pathname available on first-render",
   "keywords": [
-    "useClientRouter"
+    "next.js", "router"
   ],
   "repository": "https://github.com/morhogg/use-client-router",
   "license": "MIT",
