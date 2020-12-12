@@ -1,22 +1,25 @@
 import router, { makePublicRouterInstance } from 'next/router';
 import { match } from 'path-to-regexp';
+import replaceString from "replace-string";
+
 import type { Router, NextRouter } from 'next/router';
 import type { MatchResult } from 'path-to-regexp';
 import type { ParsedUrlQuery } from 'querystring';
 
 /**
- * Current nextjs router on client have a strange behaviour
+ * Current Next.js router on client have a strange behaviour
  * the router.query is an empty object on first render
- * others routers have the query|params
+ * others routers like react-router have the query|params always available
  *
- * Make next router *query* and *pathname* available on first-render
+ * Wrap Next.js router with resolved pathname and query
  */
 function fixClientRouter(): NextRouter {
 	if (typeof window !== 'undefined') {
 		const windowPathname = window.location.pathname;
 
 		const routerPathname = router.pathname;
-		const readyToPathToRegExpProcess = routerPathname.replaceAll('[', ':').replaceAll(']', '');
+		const firstRoutePart = replaceString(routerPathname, '[', ':');
+		const readyToPathToRegExpProcess = replaceString(firstRoutePart, ']', '');
 
 		return {
 			...makePublicRouterInstance(router.router as Router),

@@ -8,6 +8,7 @@
     "allowJs": true,
     "jsx": "preserve",
     "lib": ["dom", "esnext"],
-    "removeComments": true
+    "removeComments": true,
+    "allowSyntheticDefaultImports": true
   }
 }

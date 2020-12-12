@@ -1,9 +1,10 @@
 {
   "name": "use-client-router",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A react hook that make router.query and router.pathname available on first-render",
   "keywords": [
-    "next.js", "router"
+    "next.js",
+    "router"
   ],
   "repository": "https://github.com/morhogg/use-client-router",
   "license": "MIT",
@@ -26,9 +27,10 @@
     "typescript": "^4.1.2"
   },
   "peerDependencies": {
-    "next": "^10.0.3"
+    "next": "^10.0.0"
   },
   "dependencies": {
-    "path-to-regexp": "^6.2.0"
+    "path-to-regexp": "^6.2.0",
+    "replace-string": "^3.1.0"
   }
 }
