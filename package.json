@@ -1,6 +1,6 @@
 {
   "name": "use-client-router",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A react hook that make router.query and router.pathname available on first-render",
   "keywords": [
     "next.js",

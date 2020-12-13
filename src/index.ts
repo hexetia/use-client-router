@@ -1,4 +1,4 @@
-import router, { makePublicRouterInstance } from 'next/router';
+import router, { makePublicRouterInstance, useRouter } from 'next/router';
 import { match } from 'path-to-regexp';
 import replaceString from "replace-string";
 
@@ -36,5 +36,8 @@ function fixClientRouter(): NextRouter {
  * Make next router *query* and *pathname* available on first-render
  */
 export const useClientRouter = (): NextRouter => {
+	// use next original router here to listen route changes
+	useRouter();
+
 	return fixClientRouter();
 };
