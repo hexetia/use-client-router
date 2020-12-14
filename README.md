@@ -23,6 +23,9 @@ yarn add use-client-router
 - router.pathname string available on first-render  
 - same interface of Next.js router
 
+### Usage
+Just replace **useRouter()** from Next.js in your code with **useClientRouter()**
+
 ### Usage example
 
 Consider the following page **pages/post/[pid].js**
@@ -49,5 +52,7 @@ const Post = () => {
 
 export default Post
 ```
+
+That's it.
 
 Summary: replace useRouter() in your code with useClientRouter()
