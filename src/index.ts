@@ -37,6 +37,8 @@ function fixClientRouter(): NextRouter {
  */
 export const useClientRouter = (): NextRouter => {
 	// use next original router here to listen route changes
+	// without this, the route will change and the component that uses this hook
+	// won't receive the updated pathname and query
 	useRouter();
 
 	return fixClientRouter();
